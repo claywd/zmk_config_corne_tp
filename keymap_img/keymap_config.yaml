@@ -176,6 +176,8 @@ parse_config:
     '&mkp RCLK': R CLK
     '&msc SCRL_UP': SCRL ↑
     '&msc SCRL_DOWN': SCRL ↓
+    '&msc SCRL_LEFT': SCRL ←
+    '&msc SCRL_RIGHT': SCRL →
     '&mmv MOVE_UP': Mouse ↑
     '&mmv MOVE_DOWN': Mouse ↓
     '&mmv MOVE_LEFT': Mouse ←
