@@ -112,6 +112,8 @@ You can then copy these settings into your config.
 
 The image was generated using [caksoylar's awesome keymap-drawer](https://github.com/caksoylar/keymap-drawer) and you can update it using the shell script in [./keymap_img/](keymap_img/).
 
+Bluetooth controls are now on a dedicated layer in [config/corne_tp.keymap](config/corne_tp.keymap). Hold the Lower thumb key to momentarily enter the BT layer, where the top row exposes `BT_CLR` and `BT_SEL 0-4` for clearing or selecting slots.
+
 ## 4. Related Resources
 
 - [My personal, more advanced zmk-config](https://github.com/infused-kim/zmk-config)
