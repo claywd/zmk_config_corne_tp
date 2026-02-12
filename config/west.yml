@@ -19,19 +19,18 @@ manifest:
     #
 
     # Standard ZMK v0.2 with official mouse/pointing support
-    # NOTE: Requires removing layer-toggle properties and using input processors
-    # See: https://github.com/infused-kim/kb_zmk_ps2_mouse_trackpoint_driver/issues/11
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: v0.2
-    #   import: app/west.yml
+    # Use with badjeff's driver module for PS2 trackpoint support
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.2
+      import: app/west.yml
 
     # infused-kim's zmk fork with mouse PR, which might be a bit outdated, but
     # is known to be compatible with the PS/2 mouse & TP driver module.
-    - name: zmk
-      remote: infused-kim
-      revision: pr-testing/mouse_ps2_module_base
-      import: app/west.yml
+    # - name: zmk
+    #   remote: infused-kim
+    #   revision: pr-testing/mouse_ps2_module_base
+    #   import: app/west.yml
 
     # pete's zmk fork with the most up to date mouse PR, which is more
     # up-to-date, but may contain incompatibilities with the PS/2 mouse & TP
@@ -61,8 +60,9 @@ manifest:
     #
 
     # Module for PS/2 mouse & TP driver
+    # Using badjeff's fork which is updated for official ZMK
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
+      remote: badjeff
       revision: main
 
   self:

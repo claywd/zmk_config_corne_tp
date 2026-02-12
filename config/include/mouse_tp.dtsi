@@ -84,17 +84,12 @@
       // x-invert;
        //y-invert;
 
-      // Set the layer that should automatically activate when the mouse is
-      // moving.
-      layer-toggle = <MOUSE_TP>;
-
-      // How long the mouse needs to move for before the layer is activated (to
-      // avoid accidental activations while typing) (Default: 250)
-      layer-toggle-delay-ms = <250>;
-
-      // How long to wait, after the last mouse movement, before deactivating
-      // the layer (Default: 250)
-      layer-toggle-timeout-ms = <250>;
+      // NOTE: layer-toggle is not supported by official ZMK's input-listener
+      // Use input processors for layer switching functionality
+      // See: https://zmk.dev/docs/keymaps/input-processors/overview
+      // layer-toggle = <MOUSE_TP>;
+      // layer-toggle-delay-ms = <250>;
+      // layer-toggle-timeout-ms = <250>;
     };
 
 
