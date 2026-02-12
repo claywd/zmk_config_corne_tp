@@ -91,9 +91,9 @@
     */
 
     &mouse_ps2_input_listener {
-      // Chain input processors: first transform axes (swap XY, invert both), then auto-activate layer
+      // Chain input processors: first transform axes (swap XY only), then auto-activate layer
       // Using ZMK's built-in &zip_xy_transform with transform flags as parameter
-      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_mouse_layer MOUSE_TP 250>;
+      input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>, <&zip_mouse_layer MOUSE_TP 250>;
     };
 
 
