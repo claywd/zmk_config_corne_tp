@@ -169,7 +169,7 @@ path {
 </g>
 <g transform="translate(812, 105)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&#x27;</text>
+<text x="0" y="0" class="key tap">RET</text>
 </g>
 <g transform="translate(28, 161)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -229,7 +229,7 @@ path {
 </a></g>
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">RET</text>
+<text x="0" y="0" class="key tap">⌘</text>
 </g>
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
@@ -347,6 +347,7 @@ path {
 </g>
 <g transform="translate(812, 105)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">&#x27;</text>
 </g>
 <g transform="translate(28, 161)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -728,17 +729,16 @@ path {
 </g>
 <g transform="translate(84, 49)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#TP-Set">
-<text x="0" y="0" class="key tap layer-activator">
-<tspan x="0" dy="-1.2em">TP</tspan><tspan x="0" dy="1.2em">Set</tspan>
-</text>
-</a><text x="0" y="24" class="key hold">toggle</text>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#BT">
 <text x="0" y="0" class="key tap layer-activator">BT</text>
-</a></g>
+</a><text x="0" y="24" class="key hold">sticky</text>
+</g>
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
@@ -758,34 +758,32 @@ path {
 </a></g>
 <g transform="translate(532, 42)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#TP-Set">
-<text x="0" y="0" class="key tap layer-activator">
-<tspan x="0" dy="-1.2em">TP</tspan><tspan x="0" dy="1.2em">Set</tspan>
-</text>
-</a><text x="0" y="24" class="key hold">toggle</text>
-</g>
+<a href="#Scroll">
+<text x="0" y="0" class="key tap layer-activator">Scroll</text>
+</a></g>
 <g transform="translate(588, 35)" class="key keypos-7">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-</g>
-<g transform="translate(644, 28)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">SCRL</tspan><tspan x="0" dy="1.2em">↑</tspan>
 </text>
 </g>
-<g transform="translate(700, 35)" class="key keypos-9">
+<g transform="translate(644, 28)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">Mouse</tspan><tspan x="0" dy="1.2em">↑</tspan>
 </text>
 </g>
+<g transform="translate(700, 35)" class="key keypos-9">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
+</g>
 <g transform="translate(756, 49)" class="key keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#TP-Set">
-<text x="0" y="0" class="key tap layer-activator">
-<tspan x="0" dy="-1.2em">TP</tspan><tspan x="0" dy="1.2em">Set</tspan>
-</text>
-</a><text x="0" y="24" class="key hold">toggle</text>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(812, 49)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -952,17 +950,16 @@ path {
 </g>
 <g transform="translate(84, 49)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#TP-Set">
-<text x="0" y="0" class="key tap layer-activator">
-<tspan x="0" dy="-1.2em">TP</tspan><tspan x="0" dy="1.2em">Set</tspan>
-</text>
-</a><text x="0" y="24" class="key hold">toggle</text>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#BT">
 <text x="0" y="0" class="key tap layer-activator">BT</text>
-</a></g>
+</a><text x="0" y="24" class="key hold">sticky</text>
+</g>
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
@@ -979,23 +976,29 @@ path {
 </a></g>
 <g transform="translate(532, 42)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-</g>
+<a href="#Scroll">
+<text x="0" y="0" class="key tap layer-activator">Scroll</text>
+</a></g>
 <g transform="translate(588, 35)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">SCRL</tspan><tspan x="0" dy="1.2em">↑</tspan>
+</text>
 </g>
 <g transform="translate(644, 28)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
 <g transform="translate(700, 35)" class="key keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(756, 49)" class="key keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#TP-Set">
-<text x="0" y="0" class="key tap layer-activator">
-<tspan x="0" dy="-1.2em">TP</tspan><tspan x="0" dy="1.2em">Set</tspan>
-</text>
-</a><text x="0" y="24" class="key hold">toggle</text>
+<a href="#BT">
+<text x="0" y="0" class="key tap layer-activator">BT</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(812, 49)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
