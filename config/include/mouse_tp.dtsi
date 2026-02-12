@@ -128,7 +128,7 @@
       //
       // Using tp-xy-swap since official ZMK input-listener doesn't support xy-swap
       tp-xy-swap;
-      // tp-x-invert;
+      tp-x-invert;
       // tp-y-invert;
 
 
