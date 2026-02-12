@@ -1,11 +1,12 @@
 # ZMK Corne TP Makefile
 # Updates keymap image locally; firmware builds via GitHub Actions on push
 
-.PHONY: all keymap-img clean help setup venv
+.PHONY: all keymap-img clean help setup venv validate
 
 # Paths
 VENV := .venv
 KEYMAP_IMG_DIR := keymap_img
+KEYMAP_FILE := config/corne_tp.keymap
 PYTHON := python3
 
 all: keymap-img
@@ -22,6 +23,11 @@ $(VENV)/bin/keymap:
 	@echo "Installing keymap-drawer..."
 	$(VENV)/bin/pip install --upgrade pip
 	$(VENV)/bin/pip install keymap-drawer
+
+# Validate keymap keycodes
+validate:
+	@echo "Validating keymap keycodes..."
+	@$(PYTHON) scripts/validate_keymap.py $(KEYMAP_FILE)
 
 # Update keymap image
 keymap-img: $(VENV)/bin/keymap
@@ -41,6 +47,7 @@ help:
 	@echo "Available targets:"
 	@echo "  all        - Update keymap image (default)"
 	@echo "  setup      - Create venv and install dependencies"
+	@echo "  validate   - Check keymap for syntax errors"
 	@echo "  keymap-img - Update keymap SVG image"
 	@echo "  clean      - Remove generated files"
 	@echo "  clean-all  - Remove generated files and venv"
