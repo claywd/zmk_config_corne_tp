@@ -71,22 +71,27 @@
   #ifdef MOUSE_PS2_DT_PRESENT
 
    /*
+    * Input Processor for Auto Layer Toggle
+    * This replaces the old layer-toggle property from infused-kim's fork
+    */
+
+    / {
+      zip_mouse_layer: zip_mouse_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        // Only activate if no key was pressed recently (avoids accidental activation while typing)
+        require-prior-idle-ms = <250>;
+      };
+    };
+
+   /*
     * Input Listener Config
     */
 
     &mouse_ps2_input_listener {
-      // NOTE: Official ZMK input-listener doesn't support xy-swap, x-invert, y-invert
-      // These are handled via input processors instead.
-      // See: https://zmk.dev/docs/keymaps/input-processors/overview
-      // 
-      // For xy-swap, you can configure it in the trackpoint driver itself
-      // using tp-xy-swap property in &mouse_ps2 below.
-
-      // NOTE: layer-toggle is not supported by official ZMK's input-listener
-      // Use input processors for layer switching functionality
-      // layer-toggle = <MOUSE_TP>;
-      // layer-toggle-delay-ms = <250>;
-      // layer-toggle-timeout-ms = <250>;
+      // Use the temp layer input processor to auto-activate MOUSE_TP layer
+      // Parameters: layer index, timeout in ms
+      input-processors = <&zip_mouse_layer MOUSE_TP 250>;
     };
 
 
