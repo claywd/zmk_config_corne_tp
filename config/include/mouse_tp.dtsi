@@ -94,6 +94,12 @@
       // Chain input processors: first transform axes (swap XY only), then auto-activate layer
       // Using ZMK's built-in &zip_xy_transform with transform flags as parameter
       input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>, <&zip_mouse_layer MOUSE_TP 250>;
+
+      // When MOUSE_KEYS layer is active, convert trackpoint movement to scroll
+      mouse_keys_scroll {
+        layers = <MOUSE_KEYS>;
+        input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>, <&zip_xy_to_scroll_mapper>;
+      };
     };
 
 
