@@ -1,6 +1,7 @@
 #ifdef HAS_MOUSE_TP
   #include <dt-bindings/zmk/mouse.h>
   #include <dt-bindings/zmk/mouse_settings.h>
+  #include <dt-bindings/input/input-event-codes.h>
   #include <behaviors/mouse_keys.dtsi>
   #include <behaviors/mouse_setting.dtsi>
 
@@ -82,6 +83,16 @@
         // Only activate if no key was pressed recently (avoids accidental activation while typing)
         require-prior-idle-ms = <250>;
       };
+
+      zip_xy_transform: zip_xy_transform {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        x-codes = <INPUT_REL_X>;
+        y-codes = <INPUT_REL_Y>;
+        xy-swap;
+        x-invert;
+      };
     };
 
    /*
@@ -89,9 +100,9 @@
     */
 
     &mouse_ps2_input_listener {
-      // Use the temp layer input processor to auto-activate MOUSE_TP layer
+      // Chain input processors: first transform axes, then auto-activate layer
       // Parameters: layer index, timeout in ms
-      input-processors = <&zip_mouse_layer MOUSE_TP 250>;
+      input-processors = <&zip_xy_transform>, <&zip_mouse_layer MOUSE_TP 250>;
     };
 
 
@@ -121,15 +132,10 @@
       tp-press-to-select-threshold = <10>;
 
 
-      // Adjust axis settings on the TP
-      // Works only on some trackpoints, but may be properly considered by the
-      // trackpoint's acceleration features (which may or may not have an
-      // impact).
-      //
-      // Using tp-xy-swap since official ZMK input-listener doesn't support xy-swap
-      // tp-xy-swap;
-      // tp-x-invert;
-      // tp-y-invert;
+      // Axis orientation is now handled by the input processor transform
+      // (zip_xy_transform) defined above, which provides xy-swap and x-invert.
+      // The PS2 driver's tp-xy-swap/tp-x-invert/tp-y-invert were not working
+      // reliably with official ZMK v0.2.
 
 
       // Set sampling rate
