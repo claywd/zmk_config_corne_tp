@@ -1,7 +1,8 @@
 #ifdef HAS_MOUSE_TP
   #include <dt-bindings/zmk/mouse.h>
   #include <dt-bindings/zmk/mouse_settings.h>
-  #include <dt-bindings/input/input-event-codes.h>
+  #include <dt-bindings/zmk/input_transform.h>
+  #include <input/processors.dtsi>
   #include <behaviors/mouse_keys.dtsi>
   #include <behaviors/mouse_setting.dtsi>
 
@@ -83,16 +84,6 @@
         // Only activate if no key was pressed recently (avoids accidental activation while typing)
         require-prior-idle-ms = <250>;
       };
-
-      zip_xy_transform: zip_xy_transform {
-        compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_X>;
-        y-codes = <INPUT_REL_Y>;
-        xy-swap;
-        x-invert;
-      };
     };
 
    /*
@@ -100,9 +91,9 @@
     */
 
     &mouse_ps2_input_listener {
-      // Chain input processors: first transform axes, then auto-activate layer
-      // Parameters: layer index, timeout in ms
-      input-processors = <&zip_xy_transform>, <&zip_mouse_layer MOUSE_TP 250>;
+      // Chain input processors: first transform axes (swap XY, invert X), then auto-activate layer
+      // Using ZMK's built-in &zip_xy_transform with transform flags as parameter
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>, <&zip_mouse_layer MOUSE_TP 250>;
     };
 
 
